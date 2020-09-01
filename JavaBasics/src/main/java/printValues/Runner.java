@@ -50,6 +50,12 @@ public class Runner {
 		MicroEdge*/
 		
 		
+		System.out.println("Array for Employee class");
+		Employee[] employees = new Employee[55];
+		
+		employees[0].getSalary();
+		
+		
 
 	}
 
