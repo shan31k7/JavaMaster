@@ -1,4 +1,4 @@
-package printValues;
+package inheritance;
 
 public class Employee {
 	public static String qualification = "Masters"; 
@@ -58,6 +58,11 @@ public class Employee {
 	public void circular(int employeeCount) {
 		System.out.println("Hello Employee !!. You are the important member of the company, you ....."
 				+ "We appreciate each employee and their efforts" + employeeCount);
+	}
+	
+	public static void parentMethod()
+	{
+		System.out.println("inside Parent method");
 	}
 
 }

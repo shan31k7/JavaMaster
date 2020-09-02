@@ -1,4 +1,4 @@
-package printValues;
+package inheritance;
 
 public class Company {
 

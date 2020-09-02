@@ -1,4 +1,4 @@
-package practisePrograms;
+package basics_Day1;
 
 public class StringOperations {
 

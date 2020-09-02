@@ -1,4 +1,4 @@
-package printValues;
+package inheritance;
 
 import static java.lang.Math.*;
 
@@ -24,11 +24,18 @@ public class OuterClass {
 
 	public static void main(String[] args) {
 		System.out.println("Inside main method");
+
+		OuterClass outer = new OuterClass();
+		OuterClass.Innerclass inner = outer.new Innerclass();
+
+		inner.innerValidate();
+
 	}
 
-	static {
-		System.out.println("Good morning !!!" + "Inside static block");
-	}
+	/*
+	 * static { System.out.println("Good morning !!!" + "Inside static block"); }
+	 */
+
 }
 
 //1000 Outerclass objects - 1000 innerclass

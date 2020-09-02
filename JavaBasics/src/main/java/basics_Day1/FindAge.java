@@ -1,4 +1,4 @@
-package practisePrograms;
+package basics_Day1;
 
 import java.util.Calendar;
 import java.util.Scanner;

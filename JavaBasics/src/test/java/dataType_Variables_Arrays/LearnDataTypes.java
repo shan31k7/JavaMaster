@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import org.testng.annotations.Test;
 
-public class NewTest {
+public class LearnDataTypes {
 	@Test
 	public void learnPrimitiveDataTypes() {
 		byte b = 0; // minimum -128 and maximum of 127

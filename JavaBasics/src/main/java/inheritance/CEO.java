@@ -1,4 +1,4 @@
-package printValues;
+package inheritance;
 
 public class CEO extends Employee {
 	
@@ -39,6 +39,12 @@ public class CEO extends Employee {
 	public void circular(int employeeCount) {
 		System.out.println("Hello Partners !!. You are the important member of the company, you ....."
 				+ "We appreciate each Partners and their efforts" + employeeCount);
+	}
+	
+	
+	public static void parentMethod()
+	{
+		System.out.println("inside child method");
 	}
 
 }

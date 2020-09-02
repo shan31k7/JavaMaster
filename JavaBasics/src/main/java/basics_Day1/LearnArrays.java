@@ -1,5 +1,4 @@
-package practisePrograms;
-
+package basics_Day1;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,20 +20,15 @@ public class LearnArrays {
 
 		System.out.println("Please enter marks for all 5 subjects: ");
 		Scanner scan = new Scanner(System.in);
-		// for ( start; condition; increment/decrement)
-
 		int i = 0;
 		for (; i < 5; i = i + 1) {
 			marks[i] = scan.nextInt();
 		}
 
-		// CTRL + A
-		// CTRL + I
-		// CTRL + SHIFT + F
 		int sum = 0;
-
 		Arrays.sort(marks);
-
+		System.out.println(marks);
+		
 		for (int j : marks) {
 			sum = sum + j;
 		}
@@ -49,7 +43,5 @@ public class LearnArrays {
 				continue; // skip the iteration
 		}
 		System.out.println("Average: " + (sum) / 5);
-
 	}
-
 }

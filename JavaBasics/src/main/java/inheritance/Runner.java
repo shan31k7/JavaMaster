@@ -1,4 +1,6 @@
-package printValues;
+package inheritance;
+
+import java.util.Collections;
 
 public class Runner {
 	final static float PI = 3.14f;    //Constant variable
@@ -53,9 +55,11 @@ public class Runner {
 		System.out.println("Array for Employee class");
 		Employee[] employees = new Employee[55];
 		
-		employees[0].getSalary();
+		//employees[0].getSalary();
 		
-		
+		System.out.println("Overriding Parent static method");
+		CEO ceo = new CEO();
+		ceo.parentMethod();
 
 	}
 
