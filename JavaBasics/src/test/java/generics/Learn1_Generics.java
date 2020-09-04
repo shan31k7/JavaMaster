@@ -2,12 +2,12 @@ package generics;
 
 import java.util.ArrayList;
 
-
 // Create custom datatype with generics
 // Create Objects for the class
 // extends, super keywords at class level and method level
 // Strictly typed
 // Price - Number
+
 
 class Currency<T extends Number> {
 	T value;
