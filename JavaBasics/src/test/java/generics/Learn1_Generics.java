@@ -2,6 +2,7 @@ package generics;
 
 import java.util.ArrayList;
 
+
 // Create custom datatype with generics
 // Create Objects for the class
 // extends, super keywords at class level and method level
