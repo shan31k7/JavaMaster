@@ -1,7 +1,5 @@
 package abstraction;
 
-
-
 /*
  * this is for github
  */

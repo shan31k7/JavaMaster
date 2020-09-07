@@ -37,8 +37,11 @@ public class LearnDataTypes {
 		Double d = 343432.343432; // Same capacity of a long
 		Character c = 'P'; // minimum '\u0000' (or 0) and a maximum '\uffff'
 		Boolean bool = true; // true or false
+		
+		Integer.parseInt("3400");
+		String.valueOf(3400);
 
-		System.out.println("Byte " + b);
+		System.out.println("Byte " + b.MAX_VALUE);
 		System.out.println("Short " + s);
 		System.out.println("Integer " + i);
 		System.out.println("Long " + l);
@@ -53,7 +56,6 @@ public class LearnDataTypes {
 		Integer A = 5;
 
 		A = a; // Auto boxing
-
 		a = A; // Unboxing
 
 		Scanner scanner = new Scanner(System.in);
