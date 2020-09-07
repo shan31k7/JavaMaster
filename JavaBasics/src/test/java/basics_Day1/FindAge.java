@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 // Program to find the age of a person
 public class FindAge {
-
 	public static void main(String[] args) {
-
 		// int yearOfBirth = 1987; //camelCase //Primitive data type
 		// Integer currentYear = 2020; // Wrapper class
 
@@ -24,7 +22,8 @@ public class FindAge {
 
 		// if Age is above 18; allow them
 		// else we are send them back
-
+		
+		// Eligible for Bachelor's Party
 		if (age >= 18 && age <= 60) {
 			System.out.println("Welcome to the party");
 		} else if (age < 18) {
@@ -32,7 +31,5 @@ public class FindAge {
 		} else {
 			System.out.println("Sorry, grand parents are not allowed");
 		}
-
 	}
-
 }
