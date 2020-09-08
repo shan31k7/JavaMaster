@@ -7,6 +7,7 @@ public class StringOperations {
 		
 		String welcomeText = "Hi, Hello, How are you, Mr.John";
 		
+		char a = welcomeText.charAt(0);
 		System.out.println(welcomeText.toUpperCase());
 		System.out.println(welcomeText.toLowerCase());
 		
@@ -22,7 +23,13 @@ public class StringOperations {
 		System.out.println(value.equals("good"));
 		System.out.println(value.equalsIgnoreCase("good"));
 
+		// String - immutable - not editable at same memory location
+		String A = "Babu";
+		String B = "Raghu";
+		A = A.concat(B);
 		
+		//StringBuffer, StringBuilder  - mutable - edit at same
+				
 	}
 
 }

@@ -2,11 +2,14 @@ package collection;
 
 import java.util.ArrayList;
 import java.util.List;
-
-// List - duplicate, null, insertion order
+// Datastructure - 
+// List - duplicate, null, maintains insertion order
 // Set - unique, no order
-// Map - key, value - key is unique, value can duplicate, null
+// Map - <key, value> - key is unique, value can duplicate and null
 // Queue - FIFO, LIFO
+
+// read, update, - ArrayList - 
+// insert, delete - LinkedList
 public class LearnCollectionList {
 	static ArrayList<Boolean> boolArray = new ArrayList<Boolean>();
 

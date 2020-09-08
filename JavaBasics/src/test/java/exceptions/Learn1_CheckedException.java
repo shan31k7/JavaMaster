@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
  * 	- meaningful information to end user
  * 	- collect information for further debugging
  * 
- * Checked Exceptions also called as "Compile time exceptions"
+ * Checked Exceptions also called as "Design time exceptions"
  * exception which can be expected
  * we shall handle by declaring the Exception using "throws" keyword
  * 			or using try and catch blocks
@@ -32,20 +32,31 @@ public class Learn1_CheckedException {
 	}
 
 	// File handling
+	@SuppressWarnings("resource")
 	@Test
 	public void fileHandle2() {
 
+		Scanner scanner = new Scanner(System.in);
 		try {
-			File file = new File(".//Activities1.txt");
-			Scanner scanner = new Scanner(file);
+			File file = new File(".//Activities11.txt");
+			scanner = new Scanner(file);
 
 			while (scanner.hasNextLine()) {
 				System.out.println(scanner.nextLine());
 			}
-			scanner.close();
-		} catch (FileNotFoundException e) {
+
+		} 
+		
+		catch (FileNotFoundException e) {
 			System.out.println("No such file exists in this directory");
 			e.printStackTrace();
+		}  
+		
+		catch (Exception q) {
+			System.out.println("Something went wrong, pleae try after sometime");
+		}finally {
+			// connection - close the connection
+			scanner.close();
 		}
 	}
 

@@ -22,7 +22,7 @@ public class Learn2_UncheckedException {
 			System.out.println("Inside custom exception");
 		}
 		
-		System.out.println("program ends");
+		//System.out.println("program ends");
 		printFirstChar(input);
 		scanner.close();
 

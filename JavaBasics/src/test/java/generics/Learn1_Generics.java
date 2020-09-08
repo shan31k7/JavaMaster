@@ -2,12 +2,14 @@ package generics;
 
 import java.util.ArrayList;
 
-// Create custom datatype with generics
+//most of the runtime problems results of invalid dataType
+	// short - Long -
+
+// Create custom class with generics
 // Create Objects for the class
 // extends, super keywords at class level and method level
 // Strictly typed
 // Price - Number
-
 
 class Currency<T extends Number> {
 	T value;
@@ -29,9 +31,9 @@ class Currency<T extends Number> {
 
 public class Learn1_Generics {
 	public static void main(String[] args) {
-
-		Currency<Integer> currency = new Currency<Integer>();
-		currency.value = 500;
+		// can be applied only for Wrapper class
+		Currency<Float> currency = new Currency<Float>();
+		currency.value = 500.0f;
 		currency.printDataType();
 
 	}

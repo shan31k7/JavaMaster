@@ -1,8 +1,9 @@
 package dataType_Variables_Arrays;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class LearnArrays {
+public class LearnArrays implements Serializable {
 
 	public static void main(String[] args) {
 		char[] name = { 'G', 'o', 'o', 'g', 'l', 'e' }; // declaring with values

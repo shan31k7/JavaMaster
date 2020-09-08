@@ -2,6 +2,7 @@ package collection;
 
 import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -18,11 +19,19 @@ public class LearnCollectionMap {
 		idName.put(13338, "Johnson");
 
 		Set<Integer> keys = idName.keySet();
-
 		for (Integer i : keys) {
 			System.out.println(idName.get(i));
 		}
 
-	}
+		LinkedHashMap<String, String> linkMap = new LinkedHashMap<String, String>();
 
+		linkMap.put("kesavan", "168496@cognizant.com");
+		linkMap.put("Nelson", "168496@cognizant.com");
+		linkMap.put("John", "168496@cognizant.com");
+		linkMap.put("Victor", "168496@cognizant.com");
+		linkMap.put("Meena", "168496@cognizant.com");
+		linkMap.put("Vasu", "168496@cognizant.com");
+
+		linkMap.forEach((key, value) -> System.out.println(key + " " + value));
+	}
 }
