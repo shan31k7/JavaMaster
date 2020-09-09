@@ -1,4 +1,4 @@
-package basics_Day1;
+package basics;
 
 public class StringOperations {
 
@@ -28,8 +28,6 @@ public class StringOperations {
 		String B = "Raghu";
 		A = A.concat(B);
 		
-		//StringBuffer, StringBuilder  - mutable - edit at same
-				
+		//StringBuffer, StringBuilder  - mutable - edit at same	
 	}
-
 }

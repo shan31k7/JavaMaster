@@ -1,4 +1,4 @@
-package basics_Day1;
+package basics;
 
 import java.util.Calendar;
 import java.util.Scanner;
