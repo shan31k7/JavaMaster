@@ -13,7 +13,7 @@ public class LearnWhileLoop {
 			text = scan.nextLine();
 			System.out.println("You entered: " + text);
 		}
-
+		scan.close();
 	}
 
 }

@@ -1,28 +1,45 @@
 package basics;
 
-import java.util.Calendar;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 // Program to find the age of a person
 public class FindAge {
+	// attributes
+	static int currentYear;
+	static int yearOfBirth;
+	
+	public FindAge()
+	{
+		
+	}
+	
+	public FindAge(int a)
+	{
+		
+	}
+	
+	// methods
 	public static void main(String[] args) {
-		// int yearOfBirth = 1987; //camelCase //Primitive data type
-		// Integer currentYear = 2020; // Wrapper class
+		currentYear = LocalDate.now().getYear();
 
-		// Read input from user
-		System.out.println("Please enter year Of Birth: ");
+		checkEligibility(currentYear, readDateOfBirth());
+		// checkEligibility(2020, 1990);
+	}
+
+	public static int readDateOfBirth() {
+		// Read DOB from user and find current year
+		System.out.println("Please enter your, year Of Birth: ");
 		Scanner scan = new Scanner(System.in);
 		int yearOfBirth = scan.nextInt();
+		scan.close();
+		return yearOfBirth;
+	}
 
-		// find the current year
-		Integer currentYear = Calendar.getInstance().get(Calendar.YEAR);
-
+	public static void checkEligibility(int currentYear, int yearOfBirth) {
 		int age = (currentYear - yearOfBirth);
 		System.out.println("Your age is: " + age);
 
-		// if Age is above 18; allow them
-		// else we are send them back
-		
 		// Eligible for Bachelor's Party
 		if (age >= 18 && age <= 60) {
 			System.out.println("Welcome to the party");

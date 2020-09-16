@@ -1,6 +1,7 @@
 package inheritance;
 
 public class CEO extends Employee {
+	// public, default, protected and private
 	
 	// child class - relationship should be - is a relationship
 	// child class relateion 'has a relationship // avoid such class
