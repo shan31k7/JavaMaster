@@ -1,10 +1,15 @@
 package inheritance;
 
-public class CEO extends Employee {
-	// public, default, protected and private
-	
+public class CEO extends Employee implements Greetings {
+	// CEO Is an employee
+	// Surgeon is a doctor
+	// Head master is a teacher
+	// doctor is a graduate
 	// child class - relationship should be - is a relationship
-	// child class relateion 'has a relationship // avoid such class
+	// child class relation 'has a relationship // avoid such class
+	
+	// inherit all public, protected and default methods, attributes from parent class
+	
 	
 	public String regulations;
 	public String empName= "Tom Cruise";
@@ -46,6 +51,12 @@ public class CEO extends Employee {
 	public static void parentMethod()
 	{
 		System.out.println("inside child method");
+	}
+
+	@Override
+	public void sayHello() {
+		// TODO Auto-generated method stub
+		System.out.println("inside class");
 	}
 
 }

@@ -1,4 +1,4 @@
-package inheritance;
+package static_final;
 
 import static java.lang.Math.*;
 

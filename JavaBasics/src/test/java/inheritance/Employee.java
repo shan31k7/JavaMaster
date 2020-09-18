@@ -1,5 +1,18 @@
 package inheritance;
 
+//Inheritance - reusing a call methods and attributes
+//Class A - 1o method
+//Class B extends A - 10 methods
+
+	// Single inheritance - one parent, one child
+	// multi level inheritance - one grandparent, one parent, child
+	// Hierarchial inheritance - one parent, multiple child
+	// multiple inheritance - mutiple parent, one child
+			 // allowed at interface level
+			 // not allowed at class level to avoid ambuiguity
+			// one class extend another class implement an interface
+			
+
 public class Employee {
 	public static String qualification = "Masters"; 
 	public String empName; // public information - within project

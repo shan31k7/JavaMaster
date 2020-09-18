@@ -1,6 +1,8 @@
-package learn_Abstraction;
+package abstraction;
 
-public abstract class ImprovedRobot implements RobotAI {
+// Author - X
+// Incomplete or Abstract
+public abstract class ImprovedRobot implements Robot_Interface {
 
 	@Override
 	public void talk() {		// defined one method
