@@ -1,11 +1,16 @@
 package k_lambdaExpression;
 
+// annonymity
+// implement a class, method - single time use - annonymous
+// to eliminate the boiler plate code 
+
 interface Hello {
 	public void sayHello(String name);
 }
 
 // ------------------------------------
 
+// Method 1 - implement interface with a class
 class Salute implements Hello {
 	@Override
 	public void sayHello(String name) {
@@ -17,30 +22,22 @@ class Salute implements Hello {
 
 public class Learn1_LambdaDemo {
 	public static void main(String[] args) {
-		// Hello hello = new Hello();
-		/*
-		 * Salute salute = new Salute(); salute.sayHello("Raju");
-		 */
 
-		// put the implementation inside
+		Salute sal = new Salute();
+		sal.sayHello("Method 1");
 
-		Hello hello1,hello2; // interface reference
-
-		hello1 = new Hello() {  //Anounymous inner class
+		// Method 2 - Implemented interface as inner class
+		Hello hello = new Hello() {
 			public void sayHello(String name) {
 				System.out.println("Hello " + name + " !!");
 			}
 		};
 
-		hello1.sayHello("Raju");
+		hello.sayHello("Method 2");
 
-		// ---------------------------------------
-		
-		// Lamdba expression
-		hello2 = (String name) -> {  //Lambda expression
-			System.out.println("Hello " + name + " !!");
-		};
-		
-		hello2.sayHello("Raju");
+		// Method 3 - using Lambda expression
+		Hello hello2 = (name) -> System.out.println("Hello " + name + " !!");
+		hello2.sayHello("Method 3");
+
 	}
 }

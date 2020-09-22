@@ -1,6 +1,6 @@
 package n_concurreny;
 
-public class Concurrency_Demo {
+public class ExtendsThreadClass {
 
 	// Responsiveness - multi tasking
 	// Performance - parallel

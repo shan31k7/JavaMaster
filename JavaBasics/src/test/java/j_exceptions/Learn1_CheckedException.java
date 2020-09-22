@@ -8,56 +8,42 @@ import java.util.Scanner;
 import org.testng.annotations.Test;
 
 /*	unlikely Event which can stop the normal flow of execution;
- * 
+ * purpose of exception handling:
  * 	- meaningful information to end user
- * 	- collect information for further debugging
+ * 	- collect information for debugging
  * 
  * Checked Exceptions also called as "Design time exceptions"
- * exception which can be expected
- * we shall handle by declaring the Exception using "throws" keyword
- * 			or using try and catch blocks
+ * 
+ *  - declaring the Exception using "throws" keyword
+ * 	- using try and catch blocks
  */
 public class Learn1_CheckedException {
 
 	// File handling
 	@Test
-	public void fileHandle() throws FileNotFoundException, IOException {
-		File file = new File(".//Activities.txt");
-		Scanner scanner = new Scanner(file);
+	public void fileHandle() {
+		File file;
+		Scanner scanner;
 
-		while (scanner.hasNextLine()) {
-			System.out.println(scanner.nextLine());
-		}
-		scanner.close();
-	}
-
-	// File handling
-	@SuppressWarnings("resource")
-	@Test
-	public void fileHandle2() {
-
-		Scanner scanner = new Scanner(System.in);
 		try {
-			File file = new File(".//Activities11.txt");
+			file = new File(".//Activities4545.txt");
 			scanner = new Scanner(file);
 
 			while (scanner.hasNextLine()) {
 				System.out.println(scanner.nextLine());
 			}
-
-		} 
-		
-		catch (FileNotFoundException e) {
-			System.out.println("No such file exists in this directory");
-			e.printStackTrace();
-		}  
-		
-		catch (Exception q) {
-			System.out.println("Something went wrong, pleae try after sometime");
-		}finally {
-			// connection - close the connection
 			scanner.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("No such file exists in the given path");
 		}
+	}
+
+	// File handling
+	@SuppressWarnings("resource")
+	@Test(description = "testcase")
+	public void fileHandle2() {
+		fileHandle();
+
 	}
 
 }

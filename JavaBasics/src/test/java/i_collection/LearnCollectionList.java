@@ -27,6 +27,13 @@ public class LearnCollectionList {
 
 		boolArray.remove(1);
 		System.out.println("Given values: " + boolArray);
+		
+		for(Boolean bool:boolArray)
+		{
+			System.out.println(bool);
+		}
+		
+		boolArray.forEach((input) -> System.out.println(input));
 
 	}
 	// LinkedList - search operation is costly,

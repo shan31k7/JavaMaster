@@ -34,9 +34,9 @@ public class CEO extends Employee implements Greetings {
 	
 	public void printName()
 	{
-		System.out.println("local empName " + this.empName);
-		System.out.println("parent empName " + super.empName);
-
+		System.out.println("local empName " + this.empName); // This object class variable
+		System.out.println("parent empName " + super.empName); // Parent object variable
+		
 	}
 	
 	//Overridden method
