@@ -3,15 +3,15 @@ package m_streams;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Scanner;
-import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -110,5 +110,25 @@ public class LearnStreams {
 		// filtered.forEach(i-> System.out.println(i));
 		// filtered.forEach(System.out::println);
 		// normal collections as nested collection
+	}
+
+	@Test
+	public void flatMap() {
+		String[][] values = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
+
+		Stream<String[]> streaming = Arrays.stream(values);
+		Stream<String> flattened = streaming.flatMap(Arrays::stream);
+
+		flattened.collect(Collectors.toList()).forEach(System.out::println);
+	}
+
+	@Test
+	public void reduce() {
+		// filter values less than 50 and add them
+		Integer[] intvalues = { 15, 33, 40, 3322, 333 };
+
+		Integer sum = Arrays.stream(intvalues).filter(i -> i < 50).reduce(0, (a, b) -> a + b).intValue();
+
+		System.out.println(sum);
 	}
 }
