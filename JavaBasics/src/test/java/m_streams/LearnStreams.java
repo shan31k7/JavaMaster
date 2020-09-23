@@ -3,7 +3,6 @@ package m_streams;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -14,7 +13,14 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.google.common.collect.ImmutableList;
+
 public class LearnStreams {
+
+	ArrayList<String> activities;
 	// Array - small set of data
 	// Collections - store huge set of data
 	// processing - filter, change it format,
@@ -39,12 +45,16 @@ public class LearnStreams {
 		return activities;
 	}
 
-	public static void main(String[] args) throws FileNotFoundException {
+	@BeforeClass
+	public void intialize() throws FileNotFoundException {
+		activities = fileHandle();
+	}
 
-		ArrayList<String> activities = fileHandle();
-
-		// filter out the activity "Project Management", make it to upper case, split it
-		// by space and
+	// Filter, map, collect
+	@Test
+	public void filterMapCollect() {
+		// filter only activity "Project Management",
+		// make it to upper case, split it by space
 		// print first word
 		// create a new list with the results
 
@@ -52,41 +62,34 @@ public class LearnStreams {
 				.filter((input) -> input.equalsIgnoreCase("Project Management")).map((input) -> input.toUpperCase())
 				.map((input) -> input.split(" ")[0]).collect(Collectors.toList());
 
-		
 		filtered.forEach((i) -> System.out.println(i));
-		// reduce
-		Long count = activities.parallelStream()
-				.filter((input) -> input.equalsIgnoreCase("Project Management")).map((input) -> input.toUpperCase())
-				.map((input) -> input.split(" ")[0]).collect(C);
-		/*
-		 * List<String> filtered = activities.stream().filter((input) ->
-		 * input.equalsIgnoreCase("Project Management")) .map((input) ->
-		 * input.toUpperCase()).map((input) ->
-		 * input.split(" ")[0]).collect(Collectors.toList());
-		 * 
-		 * List<String> filtered1 = activities.stream().filter((input) ->
-		 * input.equalsIgnoreCase("Project Management")) .map((input) -> { input =
-		 * input.toUpperCase(); input = input.split(" ")[0]; return input;
-		 * }).collect(Collectors.toList());
-		 */
+	}
 
+	@Test
+	public void distinctMinMax() throws FileNotFoundException {
 		// distinct values
-		// streams are lazy
-		activities.stream().distinct().collect(Collectors.toList());
-		activities.stream().collect(Collectors.toSet());
+		// streams become lazy if collect is missed
+		activities.stream().distinct().collect(Collectors.toList()).forEach(i -> System.out.println(i));
+		activities.stream().collect(Collectors.toSet()).forEach(i -> System.out.println(i));
 
+		List<Integer> value = ImmutableList.of(34, 55, 666, 7777, 43453, 76776, 23423);
+		// Minimum, Maximum
+		System.out.println("Minimum value: " + value.stream().min(Comparator.naturalOrder()).get());
+		System.out.println("Maximum value: " + value.stream().max(Comparator.naturalOrder()).get());
+	}
+
+	@Test
+	public void streamsGroupBy() {
 		// grouping and finding occurences
 		System.out.println("Grouping");
 		Map<String, Long> groupbyCount = activities.stream()
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 		groupbyCount.forEach((value, count) -> System.out.println(value + " > " + count));
+	}
 
-		// stream, collect - mandatory
-		// filter, map, reduce - optional
-		activities.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-				.forEach((str, count) -> System.out.println(str + " occured " + count + "times"));
-
+	@Test
+	public void optional() {
 		System.out.println("Integer filter with Optional");
 		ArrayList<Integer> value = new ArrayList<Integer>();
 		value.add(34);
@@ -100,35 +103,12 @@ public class LearnStreams {
 		Optional<Integer> processed = value.stream().filter((j) -> j < 10).findFirst();
 		System.out.println(processed.orElse(-1));
 
-		// Minimum
-		System.out.println("Minum value" + value.stream().min(Comparator.naturalOrder()));
-		System.out.println("Maximum value" + value.stream().max(Comparator.naturalOrder()));
-
 		// Method reference
 		// pass by value - primitive types
 		// pass by reference - Objects
 		// pass by Method
 		// filtered.forEach(i-> System.out.println(i));
-		filtered.forEach(System.out::println);
-
+		// filtered.forEach(System.out::println);
 		// normal collections as nested collection
-
-		Set<String> names = new HashSet<String>();
-
-		names.add("Raju");
-		names.add("Raju1");
-		names.add("Raju2");
-		names.add("Ramu");
-		names.add("Raju3");
-		names.add("Raju4");
-		names.add("Raju5");
-		names.add("Raju6");
-		names.add("Raju7");
-		names.add("Raju8");
-		// map - convert from one form to another
-		// flatmap - String - "array of character"
-		// List<String> flatmap = names.stream().flatMap((i) -> Stream.of().collect(Collectors.toList());
-
 	}
-
 }

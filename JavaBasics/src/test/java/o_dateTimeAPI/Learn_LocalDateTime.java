@@ -42,10 +42,5 @@ public class Learn_LocalDateTime {
 		
 		// time difference
 		System.out.println(ChronoUnit.MILLIS.between(time1, time2));
-		
-		
-		
-		
-
 	}
 }
