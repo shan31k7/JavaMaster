@@ -33,8 +33,6 @@ public class LearnCollectionList {
 			System.out.println(bool);
 		}
 		
-		boolArray.forEach((input) -> System.out.println(input));
-
 	}
 	// LinkedList - search operation is costly,
 	// ArrayList - search operation - insertion order, insert or remove

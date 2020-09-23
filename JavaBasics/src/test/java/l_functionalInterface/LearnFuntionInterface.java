@@ -38,8 +38,25 @@ public class LearnFuntionInterface {
 
 		patient.accept(patient1);
 		// value is assigned
+
 		System.out.println(patient1.getDisease());
 
+		ArrayList<Boolean> boolArray = new ArrayList<Boolean>();
+		boolArray.add(true);
+		boolArray.add(false);
+		boolArray.add(true);
+		boolArray.add(false);
+		boolArray.add(true);
+		boolArray.add(false);
+
+		Consumer<Boolean> consumer = (input) -> {
+			if (input)
+				System.out.println("TRUE");
+			else
+				System.out.println("FALSE");
+		};
+
+		boolArray.forEach(consumer);
 	}
 
 	@Test
