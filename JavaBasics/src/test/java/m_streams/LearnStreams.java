@@ -102,33 +102,43 @@ public class LearnStreams {
 
 		Optional<Integer> processed = value.stream().filter((j) -> j < 10).findFirst();
 		System.out.println(processed.orElse(-1));
-
-		// Method reference
-		// pass by value - primitive types
-		// pass by reference - Objects
-		// pass by Method
-		// filtered.forEach(i-> System.out.println(i));
-		// filtered.forEach(System.out::println);
-		// normal collections as nested collection
 	}
 
 	@Test
 	public void flatMap() {
+		// Map = transform from one form to another
+		// flatmap = tranform and flatten.
 		String[][] values = { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" } };
 
 		Stream<String[]> streaming = Arrays.stream(values);
-		Stream<String> flattened = streaming.flatMap(Arrays::stream);
+		Stream<String> flattened = streaming.flatMap((i) -> Arrays.stream(i));
+		// filter, map, collect, reduce
+		flattened.collect(Collectors.toList()).forEach((i) -> System.out.print(i + " "));
+	}
 
-		flattened.collect(Collectors.toList()).forEach(System.out::println);
+	@Test
+	public void methodReference() {
+		// Method reference
+		// pass by value - primitive types
+		// pass by reference - Objects
+		// pass by Method
+
+		// using lambda
+		activities.forEach((i) -> System.out.println(i));
+
+		// using Method reference
+		activities.forEach(System.out::println);		// static
+
+		// we should use Object reference if the methods are non static
 	}
 
 	@Test
 	public void reduce() {
+		// reduce the multiple values to single value
 		// filter values less than 50 and add them
 		Integer[] intvalues = { 15, 33, 40, 3322, 333 };
 
-		Integer sum = Arrays.stream(intvalues).filter(i -> i < 50).reduce(0, (a, b) -> a + b).intValue();
-
+		Integer sum = Arrays.stream(intvalues).filter(i -> (i < 50)).reduce(0, (a, b) -> a + b).intValue();
 		System.out.println(sum);
 	}
 }

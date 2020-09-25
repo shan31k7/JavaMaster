@@ -1,0 +1,56 @@
+/* apply to any tag */
+/* be careful; CSS will cascade or override the previous change if it repeated */
+p,
+h2,
+h1 {
+    color: red;
+    font-family: monospace;
+    font-weight: 200;
+    text-align: justify;
+    font-size: 20px;
+}
+
+/* apply same style to multiple tags, separated by comma */
+blockquote {
+    color: aqua;
+    border: 2px solid Green;
+    font-weight: 600;
+    text-align: justify;
+    font-size: 35px
+}
+
+/***********************************************************************************/
+
+/* apply style to id */
+#special {
+    color: fuchsia;
+    font-weight: 600;
+    background-color: cyan;
+    text-align: justify;
+    font-size: 15px;
+    border: solid;
+}
+
+
+/* apply style to class */
+.generic {
+    color: darkred;
+    font-weight: 600;
+    text-align: justify;
+    font-size: 10px
+}
+
+
+
+ol {
+    list-style-type: lower-greek;
+    box-sizing: 10px;
+}
+
+body p {
+    font-size: 50px;
+}
+
+div {
+    border: solid Green;
+}

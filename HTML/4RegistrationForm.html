@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="uft-8">
+    <title>User Registration Form with Lists</title>
+    <link rel='stylesheet' href="resources/stylesheet.css">
+</head>
+
+<body>
+
+    <!-- Form -->
+    <form action="process_data.php" method="post">
+        <label>Name
+            <input type="text" name="userName">
+        </label>
+
+        <p>Email
+            <input type="email" placeholder="please enter valid email address" name="userEmail">
+        </p>
+        <p>Password <input type="password" name="userPassword"></p>
+        <p><input type="submit" name="submitForm"></p>
+
+    </form>
+
+    <!-- Unordered List symbols, -->
+    <ul>
+        <li>Python</li>
+        <li>Perl</li>
+        <li>PHP</li>
+    </ul>
+
+    <!-- Ordered List number, alphabets -->
+    <ol>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ol>
+
+    <!-- Description List -->
+    <dl>
+        <dt>Cricket</dt>
+        <dd> Cricket is a bat-and-ball game played between two teams of eleven players.</dd>
+        <dt>Table Tennis</dt>
+        <dd> Table tennis, also known as ping-pong, is a sport in which two or four players.</dd>
+    </dl>
+
+    <!-- Nested List -->
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <ol>
+            <li>SubItem1</li>
+            <li>SubItem2</li>
+            <li>SubItem3</li>
+            <dl>
+                <dt><strong>Explanation for SubItem3</strong></dt>
+                <i>
+                    <dd>this sample will explain you the implementation of nested Lists</dd>
+                </i>
+            </dl>
+        </ol>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+    </ul>
+</body></html>

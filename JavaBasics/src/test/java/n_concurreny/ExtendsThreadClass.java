@@ -1,7 +1,5 @@
 package n_concurreny;
 
-import java.math.BigInteger;
-
 public class ExtendsThreadClass {
 	// Concurrency
 	// Responsiveness - multi tasking

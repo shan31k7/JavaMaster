@@ -2,7 +2,6 @@ package j_exceptions;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner;
 
 import org.testng.annotations.Test;
@@ -39,7 +38,6 @@ public class Learn1_CheckedException {
 	}
 
 	// File handling
-	@SuppressWarnings("resource")
 	@Test(description = "testcase")
 	public void fileHandle2() {
 		fileHandle();

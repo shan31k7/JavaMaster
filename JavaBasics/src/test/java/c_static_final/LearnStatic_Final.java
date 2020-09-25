@@ -1,7 +1,6 @@
 package c_static_final;
 
 import static java.lang.Math.random;
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
 /*
  * static 	- class level, common for all Objects, 

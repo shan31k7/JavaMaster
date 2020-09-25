@@ -11,7 +11,7 @@ public class RunnerCustomException {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter your input: ");
 		String input = scanner.nextLine();
-
+		scanner.close();
 		try {
 			if (input.equalsIgnoreCase(""))
 				throw new Learn3_CustomException();

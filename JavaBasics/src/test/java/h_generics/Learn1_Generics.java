@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 class Currency<T extends Number> {
 	T value;
-	int PI=3;
+	int PI = 3;
 
 	public void printDataType() {
 		System.out.println("Inside Currency class");
@@ -29,16 +29,16 @@ class Currency<T extends Number> {
 
 }
 
+@SuppressWarnings("unused")
 public class Learn1_Generics {
 	public static void main(String[] args) {
 		// generics can be applied only for Wrapper class
-		//Currency<String> currency1 = new Currency<String>();
-		//Currency<Boolean> currency2 = new Currency<Boolean>();
-		//Currency<Character> currency3 = new Currency<Character>();
+		// Currency<String> currency1 = new Currency<String>();
+		// Currency<Boolean> currency2 = new Currency<Boolean>();
+		// Currency<Character> currency3 = new Currency<Character>();
 		Currency<Float> currency4 = new Currency<Float>();
 		Currency<Double> currency5 = new Currency<Double>();
 		Currency<Integer> currency6 = new Currency<Integer>();
-
 
 	}
 

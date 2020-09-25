@@ -1,7 +1,6 @@
 package c_static_final;
 
 import c_static_final.LearnStatic_Final.InnerClass1;
-import c_static_final.LearnStatic_Final.InnerClass2;
 
 public class Runner_LearnStatic_Final {
 

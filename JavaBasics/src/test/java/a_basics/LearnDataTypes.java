@@ -36,7 +36,8 @@ public class LearnDataTypes {
 		Character c = 'P'; // minimum '\u0000' (or 0) and a maximum '\uffff'
 		Boolean bool = true; // true or false
 
-		System.out.println("Byte " + b.MAX_VALUE);
+		System.out.println("Byte " + Byte.MAX_VALUE);
+		System.out.println("Byte " + b);
 		System.out.println("Short " + s);
 		System.out.println("Integer " + i);
 		System.out.println("Long " + l);

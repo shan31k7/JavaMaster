@@ -1,8 +1,11 @@
 package j_exceptions;
 
-import java.util.Scanner;
-
 public class Learn3_CustomException extends StringIndexOutOfBoundsException {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	Learn3_CustomException() {
 		super(); // parent class constructor

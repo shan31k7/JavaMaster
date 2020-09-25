@@ -9,9 +9,9 @@ public class Learn2_CollectionGenerics {
 		array.add(33);
 		array.add(3);
 		array.add(45);
-		//array.add("hello");
-		//array.add(true);
-		//array.add(99.999f);
+		// array.add("hello");
+		// array.add(true);
+		// array.add(99.999f);
 
 		System.out.println("Given values: " + array);
 
@@ -26,7 +26,7 @@ public class Learn2_CollectionGenerics {
 		multiplyBy2(array);
 	}
 
-	public static void multiplyBy2(ArrayList arr) {
+	public static void multiplyBy2(ArrayList<Integer> arr) {
 		for (Object value : arr) {
 			System.out.print((Integer) value * 2 + ", ");
 		}

@@ -6,8 +6,8 @@ public class StringOperations {
 		// Different String related operations
 		String welcomeText = "Hi, Hello, How are you, Mr.John";
 		String text = new String("Hello");
-		
-		System.out.println("Given Text: " + welcomeText + "\n");
+
+		System.out.println("Given Text: " + welcomeText + "\n" + text);
 
 		// pick a character
 		System.out.println("First letter: " + welcomeText.charAt(0));

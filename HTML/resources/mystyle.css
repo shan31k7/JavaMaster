@@ -1,0 +1,23 @@
+body {
+                background-color: azure;
+            }
+            p { 
+                color:red;
+                font-family: monospace;
+                font-weight: 200;
+                text-align: justify;
+                font-size: 24px}
+            
+            blockquote {
+                color:chartreuse;
+                font-weight:600;
+                text-align: justify;
+                font-size: 35px}
+            
+            h1 {
+                color:chartreuse;
+            }
+            
+            img {
+                
+            }

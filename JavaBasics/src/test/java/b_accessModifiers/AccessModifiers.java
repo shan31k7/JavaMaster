@@ -17,11 +17,13 @@ public class AccessModifiers {
 	}
 
 	private void privateMethod() {
+		System.out.println("privateVar: " + privateVar);
 		System.out.println("This is private method");
 	}
 
 	void defaultMethod() {
-		System.out.println("This is private method");
+		System.out.println("This is default method");
+		privateMethod();
 	}
 
 	protected void protectedMethod() {
