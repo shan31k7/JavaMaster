@@ -22,6 +22,8 @@ public class LearnDataTypes {
 		System.out.println("double " + d);
 		System.out.println("char " + c);
 		System.out.println("bool " + bool);
+		
+		// some code change made by X devlopers
 
 	}
 
